@@ -9,7 +9,8 @@ type Actor{
 
       address:String,
       dob:String,
-      filmId:Int
+      filmId:Int,
+      film:Film
 }
 
 type Film{
@@ -23,6 +24,7 @@ type Film{
 }
 
 type Query{
-    getAllActors:[Actor]
+    getAllActors:[Actor],
+    getActorById(id:Int):Actor
 }
 
